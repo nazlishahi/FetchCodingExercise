@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FetchCodingExercise</string>
+
+    <string name="generic_error_message">Something went wrong. Please try again later.</string>
+
+    <string name="text_header_item_information_TEMPLATE">List id: %1$d</string>
+    <string name="text_list_item_information_TEMPLATE">%1$s\nId: %2$d\nList id: %3$d</string>
+</resources>

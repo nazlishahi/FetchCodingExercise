@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Spaces (margin/padding) -->
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_size_default">16sp</dimen>
+    <dimen name="text_size_subtitle">20sp</dimen>
+    <dimen name="text_line_spacing_extra">4sp</dimen>
+
+</resources>
