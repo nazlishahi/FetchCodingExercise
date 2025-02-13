@@ -23,7 +23,7 @@ This is a coding challenge project that fetches a list of items from a given JSO
 
 ## 📡 API Source
 
-The app fetches country data from:
+The app fetches item data from:
 
 ```
 https://fetch-hiring.s3.amazonaws.com/hiring.json
