@@ -19,11 +19,11 @@ class ListViewModel
     constructor(
         private val getListUseCase: GetListUseCase,
     ) : ViewModel() {
-        private val _progressFlag = MutableLiveData<Boolean>()
-        val progressBarFlag: LiveData<Boolean> = _progressFlag
+        private val _progressBarFlag = MutableLiveData<Boolean>()
+        val progressBarFlag: LiveData<Boolean> = _progressBarFlag
 
         private val _uiState = MutableLiveData<UiState>()
-        val uiState: LiveData<UiState> = _uiState
+        val uiState: LiveData<UiState> get() = _uiState
 
         private val errorHandler =
             CoroutineExceptionHandler { _, exception ->
@@ -35,7 +35,7 @@ class ListViewModel
 
         fun getList() {
             viewModelScope.launch(ioContext) {
-                _progressFlag.postValue(true)
+                _progressBarFlag.postValue(true)
                 runCatching {
                     val result = getListUseCase.invoke()
                     when {
@@ -59,7 +59,7 @@ class ListViewModel
                 }.onFailure {
                     _uiState.postValue(UiState.Error(it.localizedMessage))
                 }
-                _progressFlag.postValue(false)
+                _progressBarFlag.postValue(false)
             }
         }
 
