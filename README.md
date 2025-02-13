@@ -1,6 +1,6 @@
 # Fetch Rewards Coding Challenge
 
-This is a coding challenge project that fetches a list of items from a given JSON endpoint and displays them in a RecyclerView, following MVVM architecture and clean coding principles.
+This is a coding challenge project that fetches a list of items from a given JSON endpoint and displays them in a RecyclerView, following MVVM architecture and clean coding principles.  For assignment details, refer to [this link](https://fetch-hiring.s3.amazonaws.com/mobile.html).
 
 ## 📌 Features
 
