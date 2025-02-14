@@ -1,6 +1,5 @@
 package com.fetchrewards.codingexercise.di
 
-import androidx.lifecycle.ViewModel
 import com.fetchrewards.codingexercise.repository.GetListRepository
 import com.fetchrewards.codingexercise.service.ApiService
 import com.fetchrewards.codingexercise.usecase.GetListUseCase
@@ -22,13 +21,13 @@ object ListModule {
 
     @Singleton
     @Provides
-    fun provideGetCountriesUseCase(repository: GetListRepository): GetListUseCase {
+    fun provideGetListUseCase(repository: GetListRepository): GetListUseCase {
         return GetListUseCase(repository)
     }
 
     @Singleton
     @Provides
-    fun provideViewModel(getListUseCase: GetListUseCase): ViewModel {
+    fun provideViewModel(getListUseCase: GetListUseCase): ListViewModel {
         return ListViewModel(
             getListUseCase,
         )
